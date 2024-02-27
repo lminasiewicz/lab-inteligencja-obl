@@ -1,6 +1,5 @@
 import datetime
 import math
-#import matplotlib
 
 def calculate_day_of_life(birth_date: datetime.date, modifier: int = 0) -> int:
     result = (datetime.date.today() - birth_date).days + modifier
