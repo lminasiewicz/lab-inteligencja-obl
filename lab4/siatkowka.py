@@ -21,7 +21,7 @@ def forward_pass(age: int, weight: int, height: int) -> float:
     return hidden1_active * (-0.81546) + hidden2_active * (1.03775) + -0.2368
 
 
-def true_or_false(x: float):
+def true_or_false(x: float) -> bool:
     if abs(x-1) > abs(x-0):
         return False
     return True
