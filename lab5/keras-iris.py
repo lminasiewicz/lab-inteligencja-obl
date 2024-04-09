@@ -8,7 +8,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.utils import plot_model
 
 # Load the iris dataset
-iris =load_iris()
+iris = load_iris()
 X = iris.data
 y = iris.target
 
@@ -123,4 +123,10 @@ plot_model(model, to_file='model_plot.png', show_shapes=True, show_layer_names=T
 # osiągał najlepsze wyniki w ostatniej epoce. Sugeruje to, że wyniki mogłyby być jeszcze trochę lepsze przy
 # nieco dłuższym treningu. Krzywa natomiast sugeruje dobrze dopasowany model.
 
-# TODO: podpunkt h)
+# h) Przejrzyj niżej wymieniony kod i wyjaśnij co się w nim dzieje.
+
+# 1) importujemy biblioteki i ładujemy dataset irysów
+# 2) normalizujemy i kodujemy dane, rozdzielamy na dane treningowe i testowe
+# 3) ładujemy już wytrenowany model, dotrenowujemy go przez 10 dodatkowych epok
+# 4) zapisujemy dotrenowany model i sprawdzamy jego efektywność
+
