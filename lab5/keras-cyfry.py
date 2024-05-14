@@ -16,6 +16,7 @@ test_images = test_images.reshape((test_images.shape[0], 28, 28, 1)).astype('flo
 train_labels = to_categorical(train_labels)
 test_labels = to_categorical(test_labels)
 original_test_labels = np.argmax(test_labels, axis=1)
+print(test_labels, original_test_labels)
 
 model = Sequential([
     Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),

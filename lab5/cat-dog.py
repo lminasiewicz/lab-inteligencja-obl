@@ -7,7 +7,6 @@ from tensorflow.keras.utils import to_categorical
 from sklearn.metrics import confusion_matrix
 from tensorflow.keras.callbacks import History
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
-from PIL import Image
 
 
 def get_model() -> Sequential:
@@ -58,7 +57,7 @@ tester = generator.flow_from_directory('dogs-cats-mini/test/',
 
 history = History()
 model.fit_generator(trainer, steps_per_epoch=len(trainer), validation_data=tester,
-                    validation_steps=len(tester), epochs=12, callbacks=[history])
+                    validation_steps=len(tester), epochs=8, callbacks=[history])
 
 _, acc = model.evaluate_generator(tester, steps=len(tester))
 print(f"Accuracy: {acc*100}%")
