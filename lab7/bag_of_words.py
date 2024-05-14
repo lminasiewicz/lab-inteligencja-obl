@@ -4,7 +4,7 @@ from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import pandas as pd
 from wordcloud import WordCloud
-# from nltk.sentiment.vader import SentimentIntensityAnalyzer
+
 
 
 def main() -> None:
@@ -31,9 +31,6 @@ def main() -> None:
     cloud = WordCloud(height=400, width=800, margin=10, )
     cloud = cloud.generate_from_text(".".join(article_lemmatized))
     cloud.to_file("wordcloud.jpg")
-    
-
-
 
 
 
