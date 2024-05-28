@@ -28,8 +28,5 @@ def main() -> None:
         dump(posts_data, fp)
 
 
-
-
-
 if __name__ == "__main__":
     main()
